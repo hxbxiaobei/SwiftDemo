@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0B2255331CBB9BAA0096801A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2255321CBB9BAA0096801A /* AppDelegate.swift */; };
-		0B2255351CBB9BAA0096801A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2255341CBB9BAA0096801A /* ViewController.swift */; };
-		0B2255381CBB9BAA0096801A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2255361CBB9BAA0096801A /* Main.storyboard */; };
 		0B22553A1CBB9BAA0096801A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2255391CBB9BAA0096801A /* Assets.xcassets */; };
-		0B22553D1CBB9BAA0096801A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B22553B1CBB9BAA0096801A /* LaunchScreen.storyboard */; };
 		0B2255481CBB9BAA0096801A /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2255471CBB9BAA0096801A /* WeiboTests.swift */; };
 		0B2255531CBB9BAB0096801A /* WeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2255521CBB9BAB0096801A /* WeiboUITests.swift */; };
+		0B2255611CBBAE980096801A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2255601CBBAE980096801A /* MainViewController.swift */; };
+		0B22556B1CBBB6EA0096801A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22556A1CBBB6EA0096801A /* HomeTableViewController.swift */; };
+		0B22556D1CBBB6FB0096801A /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22556C1CBBB6FB0096801A /* MessageTableViewController.swift */; };
+		0B22556F1CBBB7050096801A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22556E1CBBB7050096801A /* ProfileTableViewController.swift */; };
+		0B2255711CBBB7150096801A /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2255701CBBB7150096801A /* DiscoverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +38,7 @@
 /* Begin PBXFileReference section */
 		0B22552F1CBB9BAA0096801A /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2255321CBB9BAA0096801A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B2255341CBB9BAA0096801A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0B2255371CBB9BAA0096801A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B2255391CBB9BAA0096801A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B22553C1CBB9BAA0096801A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B22553E1CBB9BAA0096801A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2255431CBB9BAA0096801A /* WeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2255471CBB9BAA0096801A /* WeiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboTests.swift; sourceTree = "<group>"; };
@@ -47,6 +46,11 @@
 		0B22554E1CBB9BAB0096801A /* WeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2255521CBB9BAB0096801A /* WeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboUITests.swift; sourceTree = "<group>"; };
 		0B2255541CBB9BAB0096801A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2255601CBBAE980096801A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../MainViewController.swift; sourceTree = "<group>"; };
+		0B22556A1CBBB6EA0096801A /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		0B22556C1CBBB6FB0096801A /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		0B22556E1CBBB7050096801A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		0B2255701CBBB7150096801A /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				0B2255321CBB9BAA0096801A /* AppDelegate.swift */,
-				0B2255341CBB9BAA0096801A /* ViewController.swift */,
-				0B2255361CBB9BAA0096801A /* Main.storyboard */,
+				0B2255621CBBB61D0096801A /* Classes */,
 				0B2255391CBB9BAA0096801A /* Assets.xcassets */,
-				0B22553B1CBB9BAA0096801A /* LaunchScreen.storyboard */,
 				0B22553E1CBB9BAA0096801A /* Info.plist */,
 			);
 			path = Weibo;
@@ -123,6 +125,74 @@
 				0B2255541CBB9BAB0096801A /* Info.plist */,
 			);
 			path = WeiboUITests;
+			sourceTree = "<group>";
+		};
+		0B2255621CBBB61D0096801A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0B2255631CBBB61D0096801A /* Common */,
+				0B2255641CBBB61D0096801A /* Discover */,
+				0B2255651CBBB61D0096801A /* Home */,
+				0B2255661CBBB61D0096801A /* Main */,
+				0B2255671CBBB61D0096801A /* Message */,
+				0B2255681CBBB61D0096801A /* Profile */,
+				0B2255691CBBB61D0096801A /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0B2255631CBBB61D0096801A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0B2255641CBBB61D0096801A /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				0B2255701CBBB7150096801A /* DiscoverTableViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		0B2255651CBBB61D0096801A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0B22556A1CBBB6EA0096801A /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0B2255661CBBB61D0096801A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0B2255601CBBAE980096801A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0B2255671CBBB61D0096801A /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0B22556C1CBBB6FB0096801A /* MessageTableViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		0B2255681CBBB61D0096801A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0B22556E1CBBB7050096801A /* ProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0B2255691CBBB61D0096801A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B22553D1CBB9BAA0096801A /* LaunchScreen.storyboard in Resources */,
 				0B22553A1CBB9BAA0096801A /* Assets.xcassets in Resources */,
-				0B2255381CBB9BAA0096801A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B2255351CBB9BAA0096801A /* ViewController.swift in Sources */,
+				0B22556B1CBBB6EA0096801A /* HomeTableViewController.swift in Sources */,
+				0B22556F1CBBB7050096801A /* ProfileTableViewController.swift in Sources */,
 				0B2255331CBB9BAA0096801A /* AppDelegate.swift in Sources */,
+				0B22556D1CBBB6FB0096801A /* MessageTableViewController.swift in Sources */,
+				0B2255711CBBB7150096801A /* DiscoverTableViewController.swift in Sources */,
+				0B2255611CBBAE980096801A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +366,6 @@
 			targetProxy = 0B22554F1CBB9BAB0096801A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0B2255361CBB9BAA0096801A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B2255371CBB9BAA0096801A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0B22553B1CBB9BAA0096801A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B22553C1CBB9BAA0096801A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0B2255551CBB9BAB0096801A /* Debug */ = {
@@ -400,7 +453,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangxiaobei.Weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,7 +466,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangxiaobei.Weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +542,7 @@
 				0B2255591CBB9BAB0096801A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B22555A1CBB9BAB0096801A /* Build configuration list for PBXNativeTarget "WeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +551,7 @@
 				0B22555C1CBB9BAB0096801A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B22555D1CBB9BAB0096801A /* Build configuration list for PBXNativeTarget "WeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +560,7 @@
 				0B22555F1CBB9BAB0096801A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
