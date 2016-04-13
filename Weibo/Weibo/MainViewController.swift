@@ -34,10 +34,10 @@ class MainTabBarController: UITabBarController {
         addChildViewController(nav)
         */
         
-        addChildViewController(HomeTableViewController(), title: "首页", image: "tabbar_home")
-        addChildViewController(MessageTableViewController(), title: "消息", image: "tabbar_message_center")
-        addChildViewController(DiscoverTableViewController(), title: "广场", image: "tabbar_discover")
-        addChildViewController(ProfileTableViewController(), title: "我", image: "tabbar_profile")
+        addChildViewController("HomeTableViewController", title: "首页", image: "tabbar_home")
+        addChildViewController("MessageTableViewController", title: "消息", image: "tabbar_message_center")
+        addChildViewController("DiscoverTableViewController", title: "广场", image: "tabbar_discover")
+        addChildViewController("ProfileTableViewController", title: "我", image: "tabbar_profile")
         
     }
 
@@ -48,17 +48,34 @@ class MainTabBarController: UITabBarController {
      - parameter title:           子控制器的标题
      - parameter image:           子控制器的图片
      */
-    private func addChildViewController(childController: UIViewController, title: String, image: String) {
+//    private func addChildViewController(childController: UIViewController, title: String, image: String) {
+     private func addChildViewController(childController: String, title: String, image: String) {
+     
+        /*
+        print(childController)
+        <Weibo.HomeTableViewController: 0x7fa8414754f0>
+        Weibo 是命名空间
+        */
         
-        // 1.创建首页
-        let childController = HomeTableViewController()
-        childController.tabBarItem.image = UIImage(named: image)
-        childController.tabBarItem.selectedImage = UIImage(named: image + "_highlighted")
-        childController.title = title
+        // 动态获取命名空间
+        let spaceName = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
+        
+        // 将字符串转为类
+        // 默认情况下命名空间就是项目的名称，但是命名空间名称是可以修改的
+        let cls: AnyClass? = NSClassFromString(spaceName + "." + childController)
+        // 将 AnyClass 转换为指定的类型
+        let vcCls = cls as! UIViewController.Type
+        // 通过类创建一个对象
+        let vc = vcCls.init()
+        
+        // 1.创建首页对应的数据
+        vc.tabBarItem.image = UIImage(named: image)
+        vc.tabBarItem.selectedImage = UIImage(named: image + "_highlighted")
+        vc.title = title
         
         // 2.给首页包装一个导航控制器
         let nav = UINavigationController()
-        nav.addChildViewController(childController)
+        nav.addChildViewController(vc)
         
         // 3.将导航控制器添加到当前控制器上
         addChildViewController(nav)
