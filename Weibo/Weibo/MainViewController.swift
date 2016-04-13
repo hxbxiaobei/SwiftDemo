@@ -34,10 +34,39 @@ class MainTabBarController: UITabBarController {
         addChildViewController(nav)
         */
         
-        addChildViewController("HomeTableViewController", title: "首页", image: "tabbar_home")
-        addChildViewController("MessageTableViewController", title: "消息", image: "tabbar_message_center")
-        addChildViewController("DiscoverTableViewController", title: "广场", image: "tabbar_discover")
-        addChildViewController("ProfileTableViewController", title: "我", image: "tabbar_profile")
+        // 1.获取 JSON 文件的路径
+        let path = NSBundle.mainBundle().pathForResource("MainVCSettings.json", ofType: nil)
+        // 2.通过文件路径创建 NSData
+        if let jsonPath = path {
+            let jsonPath = NSData(contentsOfFile: jsonPath)
+            
+            do {
+                // 有可能发生异常的代码放到这里
+                // 3.序列化 JSON 数据 --> Array
+                // try : 发生异常会跳到 catch 中继续执行
+                // try! : 发生异常程序直接崩溃
+                let dictArr = try NSJSONSerialization.JSONObjectWithData(jsonPath!, options: NSJSONReadingOptions.MutableContainers)
+                // 4.遍历数组，动态创建控制器和设置数据
+                // 在 Swift 中，如果需要遍历一个数组，必须明确数据的类型
+                for dict in dictArr as! [[String : String]] {
+                    
+                    // 报错的原因是因为 addChildViewController 参数必须有值，但是字典的返回值是可选类型
+                    addChildViewController(dict["vcName"]!, title: dict["title"]!, image: dict["imageName"]!)
+                }
+            }catch {
+                
+                // 发生异常之后会执行的代码
+                print(error)
+                
+                // 从本地创建控制器
+                addChildViewController("HomeTableViewController", title: "首页", image: "tabbar_home")
+                addChildViewController("MessageTableViewController", title: "消息", image: "tabbar_message_center")
+                addChildViewController("DiscoverTableViewController", title: "广场", image: "tabbar_discover")
+                addChildViewController("ProfileTableViewController", title: "我", image: "tabbar_profile")
+            }
+        }
+        
+
         
     }
 
