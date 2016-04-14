@@ -17,6 +17,50 @@ class MainTabBarController: UITabBarController {
         // 注意：在iOS7以前如果设置了 tintColor 只有文字会变，而图片不会变
         tabBar.tintColor = UIColor.orangeColor()
         
+        // 添加子控制器
+        addChildViewControllers()
+        
+        // 从 iOS7 开始就不推荐在 viewDidLoad 中设置 frame
+    
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 添加中间的加号按钮
+        setupComposeBtn()
+    }
+    
+    /**
+     监听加号按钮点击
+     注意：监听按钮点击的方法不能是私有方法
+     */
+    func composeBtnClick() {
+        print(__FUNCTION__)
+    }
+    
+    // MARK: - 内部控制方法
+    private func setupComposeBtn() {
+        
+        // 添加加号按钮
+        tabBar.addSubview(composeBtn)
+        // 调整加号按钮的位置
+        let width = UIScreen.mainScreen().bounds.size.width / CGFloat(viewControllers!.count)
+        let rect = CGRect(x: 0, y: 0, width: width, height: 49)
+        
+        /*
+        第一个参数：是 frame 的大小
+        第二个参数：是 x 方向偏移的大小
+        第三个参数：是 y 方向偏移的大小
+        */
+        composeBtn.frame = CGRectOffset(rect, 2 * width, 0)
+    }
+    
+    /**
+     添加所有的子控制器
+     */
+    private func addChildViewControllers() {
+        
         /*
         // 1.创建首页
         let home = HomeTableViewController()
@@ -61,12 +105,14 @@ class MainTabBarController: UITabBarController {
                 // 从本地创建控制器
                 addChildViewController("HomeTableViewController", title: "首页", image: "tabbar_home")
                 addChildViewController("MessageTableViewController", title: "消息", image: "tabbar_message_center")
+                
+                // 在添加一个占位控制器
+                addChildViewController("NullViewController", title: "", image: "")
+                
                 addChildViewController("DiscoverTableViewController", title: "广场", image: "tabbar_discover")
                 addChildViewController("ProfileTableViewController", title: "我", image: "tabbar_profile")
             }
         }
-        
-
         
     }
 
@@ -109,5 +155,23 @@ class MainTabBarController: UITabBarController {
         // 3.将导航控制器添加到当前控制器上
         addChildViewController(nav)
     }
+    
+    // MARK: - 懒加载
+    private lazy var composeBtn: UIButton = {
+        let btn = UIButton()
+        
+        // 设置前景图片
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: UIControlState.Normal)
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: UIControlState.Highlighted)
+        
+        // 设置背景图片
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
+        
+        // 添加监听事件
+        btn.addTarget(self, action: "composeBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        return btn
+    }()
 
 }
